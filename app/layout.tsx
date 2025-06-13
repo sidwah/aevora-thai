@@ -4,6 +4,7 @@ import './globals.css';
 import Header from '@/components/layout/header';
 import DarkModeToggle from '@/components/ui/dark-mode-toggle';
 import ThemeScript from '@/components/theme-script';
+import Footer from '@/components/layout/footer';
 
 const playfair = Playfair_Display({
   subsets: ['latin'],
@@ -42,7 +43,10 @@ export default function RootLayout({
       <head>
         <ThemeScript />
       </head>
-      <body className="font-secondary text-primary-dark" suppressHydrationWarning={true}>
+      <body 
+        className="font-secondary text-primary-dark dark:text-primary-dark bg-primary-cream dark:bg-primary-cream transition-colors duration-150" 
+        suppressHydrationWarning={true}
+      >
         {/* Background with decorative elements for glass effects */}
         <div className="fixed inset-0 -z-10">
           {/* Main gradient background */}
@@ -63,10 +67,13 @@ export default function RootLayout({
           <div className="absolute inset-0 bg-glass-decoration" />
         </div>
 
-        <Header />
-        <main className="relative min-h-screen">
-          {children}
-        </main>
+        <div className="flex flex-col min-h-screen">
+          <Header />
+          <main className="relative flex-1">
+            {children}
+          </main>
+          <Footer />
+        </div>
         
         {/* Floating Dark Mode Toggle */}
         <DarkModeToggle />

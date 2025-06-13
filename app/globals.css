@@ -314,3 +314,46 @@ h1, h2, h3, h4, h5, h6 {
 .dark .bg-glass-decoration {
   opacity: 0.03;
 }
+/* Enhanced Footer Dark Mode Support */
+.footer-nav-link {
+  position: relative;
+  transition: all 150ms ease;
+}
+
+.footer-nav-link:hover {
+  transform: translateY(-1px);
+}
+
+.footer-nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 50%;
+  width: 0;
+  height: 1px;
+  background: var(--color-primary-brown);
+  transition: all 200ms ease;
+  transform: translateX(-50%);
+}
+
+.footer-nav-link:hover::after {
+  width: 100%;
+}
+
+/* Social media icon hover effects */
+.glass-light:hover {
+  transform: translateY(-1px) scale(1.05);
+}
+
+/* Better glass effects for footer in dark mode */
+.dark .glass-light {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.dark .glass-medium {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.4);
+}
