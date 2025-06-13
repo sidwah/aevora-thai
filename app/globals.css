@@ -1,64 +1,31 @@
 @import "tailwindcss";
 
-:root {
-  /* Primary Brand Colors */
-  --primary-terracotta: #B8860B;
-  --primary-cream: #F5F5DC;
-  --primary-sage: #9CAF88;
-  
-  /* Secondary Colors */
-  --secondary-warm-brown: #8B4513;
-  --secondary-soft-pink: #F4E4D6;
-  --secondary-muted-gold: #DAA520;
-  
-  /* Neutral Colors */
-  --neutral-charcoal: #2C2C2C;
-  --neutral-warm-gray: #6B7280;
-  --neutral-light-gray: #F9FAFB;
-  --neutral-white: #FFFFFF;
-  
-  /* Accent Colors */
-  --accent-coral: #FF6B6B;
-  --accent-forest: #4A5D23;
-  --accent-sunset: #FF8C42;
-  
-  /* Background & Foreground */
-  --background: var(--primary-cream);
-  --foreground: var(--neutral-charcoal);
-}
-
 @theme inline {
-  /* Color System */
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  
-  /* Primary Colors */
-  --color-primary-terracotta: var(--primary-terracotta);
-  --color-primary-cream: var(--primary-cream);
-  --color-primary-sage: var(--primary-sage);
+  /* Primary Brand Colors */
+  --color-primary-terracotta: #B8860B;
+  --color-primary-cream: #F5F5DC;
+  --color-primary-sage: #9CAF88;
   
   /* Secondary Colors */
-  --color-secondary-warm-brown: var(--secondary-warm-brown);
-  --color-secondary-soft-pink: var(--secondary-soft-pink);
-  --color-secondary-muted-gold: var(--secondary-muted-gold);
+  --color-secondary-warm-brown: #8B4513;
+  --color-secondary-soft-pink: #F4E4D6;
+  --color-secondary-muted-gold: #DAA520;
   
   /* Neutral Colors */
-  --color-neutral-charcoal: var(--neutral-charcoal);
-  --color-neutral-warm-gray: var(--neutral-warm-gray);
-  --color-neutral-light-gray: var(--neutral-light-gray);
-  --color-neutral-white: var(--neutral-white);
+  --color-neutral-charcoal: #2C2C2C;
+  --color-neutral-warm-gray: #6B7280;
+  --color-neutral-light-gray: #F9FAFB;
+  --color-neutral-white: #FFFFFF;
   
   /* Accent Colors */
-  --color-accent-coral: var(--accent-coral);
-  --color-accent-forest: var(--accent-forest);
-  --color-accent-sunset: var(--accent-sunset);
+  --color-accent-coral: #FF6B6B;
+  --color-accent-forest: #4A5D23;
+  --color-accent-sunset: #FF8C42;
   
   /* Typography */
   --font-primary: 'Playfair Display', serif;
   --font-secondary: 'Inter', sans-serif;
   --font-accent: 'Dancing Script', cursive;
-  --font-sans: var(--font-secondary);
-  --font-serif: var(--font-primary);
   
   /* Spacing Scale */
   --space-1: 0.25rem;
@@ -75,20 +42,27 @@
   --space-24: 6rem;
   --space-32: 8rem;
   
-  /* Custom Animations */
-  --animate-fade-in: fadeIn 0.5s ease-in-out;
-  --animate-slide-up: slideUp 0.5s ease-out;
-  --animate-float: float 6s ease-in-out infinite;
+  /* Background Gradients */
+  --bg-warm-gradient: linear-gradient(135deg, #F5F5DC 0%, #F4E4D6 100%);
+  --bg-hero-gradient: linear-gradient(135deg, #F9FAFB 0%, #F5F5DC 50%, #F4E4D6 100%);
+  
+  /* Base Colors for Dark/Light Mode */
+  --background: #F5F5DC;
+  --foreground: #2C2C2C;
+  
+  /* Animation Keyframes */
+  --animation-fade-in: fadeIn 0.5s ease-in-out;
+  --animation-slide-up: slideUp 0.5s ease-out;
+  --animation-float: float 6s ease-in-out infinite;
 }
 
 @media (prefers-color-scheme: dark) {
-  :root {
-    --background: var(--neutral-charcoal);
-    --foreground: var(--primary-cream);
+  @theme inline {
+    --background: #2C2C2C;
+    --foreground: #F5F5DC;
   }
 }
 
-/* Custom Keyframes */
 @keyframes fadeIn {
   from { opacity: 0; }
   to { opacity: 1; }
@@ -111,39 +85,35 @@
 }
 
 /* Base Styles */
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-secondary);
   line-height: 1.6;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
-/* Typography Base */
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-primary);
   font-weight: 600;
   line-height: 1.2;
 }
 
-/* Smooth Scrolling */
-html {
-  scroll-behavior: smooth;
-}
-
-/* Custom Utility Classes */
+/* Utility Classes */
 .text-gradient {
-  background: linear-gradient(135deg, var(--primary-terracotta), var(--secondary-muted-gold));
+  background: linear-gradient(135deg, var(--color-primary-terracotta), var(--color-secondary-muted-gold));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
 .bg-warm-gradient {
-  background: linear-gradient(135deg, var(--primary-cream) 0%, var(--secondary-soft-pink) 100%);
+  background: var(--bg-warm-gradient);
 }
 
 .bg-hero-gradient {
-  background: linear-gradient(135deg, var(--neutral-light-gray) 0%, var(--primary-cream) 50%, var(--secondary-soft-pink) 100%);
+  background: var(--bg-hero-gradient);
 }
