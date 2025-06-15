@@ -1,74 +1,169 @@
+import Container from '@/components/layout/container';
+import Section from '@/components/layout/section';
+import PageWrapper from '@/components/layout/page-wrapper';
+import Grid from '@/components/layout/grid';
+import Flex from '@/components/layout/flex';
+
 export default function Home() {
   return (
-    <div className="min-h-screen">
-      {/* Hero Section with Glass Effect */}
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16">
-        <div className="text-center">
-          <div className="glass-cream rounded-2xl p-8 lg:p-12 mb-12">
-            <h1 className="text-4xl lg:text-6xl font-primary font-bold text-primary-brown mb-6">
-              Welcome to Aevora Thai
+    <PageWrapper background="glass" decorativeElements>
+      {/* Hero Section */}
+      <Section spacing="xl" background="none" id="hero">
+        <Flex 
+          direction="col" 
+          align="center" 
+          justify="center"
+          gap="lg"
+          className="min-h-[80vh] text-center"
+          responsive={{
+            lg: { direction: 'row', justify: 'between', align: 'center' }
+          }}
+        >
+          <div className="glass-card p-8 lg:p-12 max-w-2xl">
+            <h1 className="font-primary text-fluid-4xl font-bold text-primary-brown mb-6 hero-text-gradient">
+              An Ambient Dining Experience
             </h1>
-            <p className="text-xl text-neutral-gray font-secondary max-w-2xl mx-auto leading-relaxed">
-              An authentic Thai dining experience with traditional flavors and modern elegance.
+            <p className="font-secondary text-fluid-lg text-neutral-gray mb-8 leading-relaxed">
+              Discover authentic Thai cuisine in the heart of East Legon. Where traditional recipes meet contemporary elegance.
             </p>
-            
-            {/* CTA Buttons with Glass Effect */}
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8">
-              <button className="glass-button px-8 py-3 text-primary-brown font-secondary font-medium rounded-lg">
+            <Flex gap="md" justify="center" className="mobile-stack">
+              <button className="bg-button-secondary hover:bg-button-hover-secondary text-secondary-white px-8 py-4 rounded-lg font-medium transition-all duration-200 touch-target">
                 View Menu
               </button>
-              <button className="bg-button-secondary hover:bg-button-hover-secondary text-white px-8 py-3 font-secondary font-medium rounded-lg transition-colors duration-200">
-                Make Reservation
+              <button className="glass-light hover:glass-medium text-primary-dark px-8 py-4 rounded-lg font-medium transition-all duration-200 touch-target">
+                Book a Table
               </button>
+            </Flex>
+          </div>
+          <div className="glass-panel p-6 lg:p-8 max-w-md">
+            <div className="aspect-square rounded-lg bg-primary-brown/10 flex items-center justify-center">
+              <span className="text-primary-brown font-secondary text-sm">
+                Hero Image Placeholder
+              </span>
             </div>
           </div>
+        </Flex>
+      </Section>
+
+      {/* Menu Preview Section */}
+      <Section spacing="lg" background="glass-light" id="menu-preview">
+        <div className="text-center mb-12">
+          <h2 className="font-primary text-fluid-3xl font-bold text-primary-brown mb-4">
+            The Finest Thai Cuisine
+          </h2>
+          <p className="font-secondary text-fluid-lg text-neutral-gray max-w-2xl mx-auto">
+            Experience the authentic flavors of Thailand with our carefully crafted menu featuring traditional recipes passed down through generations.
+          </p>
         </div>
         
-        {/* Content Sections with Glass Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 pt-16">
-          {Array.from({ length: 6 }, (_, i) => (
-            <div key={i} className="glass-card rounded-xl p-6 hover:scale-[1.02] transition-transform duration-300">
-              <h2 className="text-2xl font-primary text-primary-brown mb-4">
-                {['Our Menu', 'Fresh Ingredients', 'Authentic Recipes', 'Modern Ambiance', 'Expert Chefs', 'Thai Heritage'][i]}
-              </h2>
-              <p className="text-neutral-gray font-secondary leading-relaxed mb-4">
-                {[
-                  'Discover our carefully curated menu featuring traditional Thai dishes with a modern twist.',
-                  'We source the finest ingredients to bring you authentic flavors in every bite.',
-                  'Family recipes passed down through generations, prepared with love and tradition.',
-                  'Experience Thai cuisine in our elegantly designed, contemporary dining space.',
-                  'Our skilled chefs bring years of experience and passion to every dish.',
-                  'Celebrating the rich cultural heritage of Thailand through food and hospitality.'
-                ][i]}
-              </p>
-              <p className="text-neutral-gray font-accent text-sm italic">
-                Experience the perfect blend of tradition and innovation.
+        <Grid 
+          cols={1} 
+          gap="lg"
+          responsive={{
+            sm: 2,
+            lg: 4
+          }}
+          className="container-query"
+        >
+          {['Appetizers', 'Salads', 'Soups', 'Main Dishes'].map((category) => (
+            <div key={category} className="glass-card p-6 card-hover responsive-card">
+              <div className="aspect-square rounded-lg bg-accent-gold/10 mb-4 flex items-center justify-center">
+                <span className="text-accent-gold font-secondary text-xs">
+                  {category} Image
+                </span>
+              </div>
+              <h3 className="font-primary text-fluid-xl font-semibold text-primary-brown mb-2">
+                {category}
+              </h3>
+              <p className="font-secondary text-neutral-gray text-sm">
+                Discover our selection of {category.toLowerCase()} featuring authentic Thai ingredients and traditional cooking methods.
               </p>
             </div>
           ))}
-        </div>
-        
-        {/* Featured Section with Strong Glass Effect */}
-        <div className="mt-16">
-          <div className="glass-strong rounded-2xl p-8 lg:p-12 text-center">
-            <h2 className="text-3xl lg:text-4xl font-primary text-primary-brown mb-6">
-              Experience Authentic Thai Cuisine
+        </Grid>
+      </Section>
+
+      {/* About Preview Section */}
+      <Section spacing="lg" background="none" id="about-preview">
+        <Grid 
+          cols={1} 
+          gap="xl"
+          responsive={{
+            lg: 2
+          }}
+          className="items-center"
+        >
+          <div className="glass-panel p-8 lg:p-12">
+            <h2 className="font-primary text-fluid-3xl font-bold text-primary-brown mb-6">
+              Tradition & Family Recipes
             </h2>
-            <p className="text-lg text-neutral-gray font-secondary max-w-3xl mx-auto leading-relaxed mb-8">
-              From traditional Pad Thai to innovative fusion dishes, every meal at Aevora Thai 
-              is a journey through the rich culinary landscape of Thailand. Our glass-enclosed 
-              kitchen allows you to witness the artistry of our chefs as they prepare your meal.
+            <p className="font-secondary text-fluid-base text-neutral-gray mb-6 leading-relaxed">
+              Our culinary journey began in the heart of Thailand, where our founder learned the art of authentic Thai cooking from her grandmother. Each dish tells a story of tradition, passion, and the finest ingredients.
             </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              {['Spicy', 'Vegetarian', 'Gluten-Free', 'Family Recipes'].map((tag) => (
-                <span key={tag} className="glass-light px-4 py-2 rounded-full text-sm font-secondary text-primary-brown">
-                  {tag}
-                </span>
-              ))}
+            <p className="font-secondary text-fluid-base text-neutral-gray mb-8 leading-relaxed">
+              Today, we bring these cherished family recipes to East Legon, creating an ambient dining experience that honors the rich heritage of Thai cuisine while embracing contemporary elegance.
+            </p>
+            <Flex gap="md" className="mobile-stack">
+              <button className="bg-button-primary hover:bg-button-hover-primary text-secondary-white px-6 py-3 rounded-lg font-medium transition-all duration-200 touch-target">
+                Our Story
+              </button>
+              <button className="glass-light hover:glass-medium text-primary-dark px-6 py-3 rounded-lg font-medium transition-all duration-200 touch-target">
+                View Gallery
+              </button>
+            </Flex>
+          </div>
+          
+          <div className="glass-card p-6">
+            <div className="aspect-[4/3] rounded-lg bg-secondary-warm-brown/10 flex items-center justify-center">
+              <span className="text-secondary-warm-brown font-secondary text-sm">
+                Restaurant Interior Image
+              </span>
             </div>
           </div>
-        </div>
-      </div>
-    </div>
+        </Grid>
+      </Section>
+
+      {/* Contact Preview Section */}
+      <Section spacing="md" background="glass-light" id="contact-preview">
+        <Container size="md">
+          <div className="glass-panel p-8 lg:p-12 text-center">
+            <h2 className="font-primary text-fluid-2xl font-bold text-primary-brown mb-6">
+              Visit Us in East Legon
+            </h2>
+            <Flex 
+              direction="col" 
+              gap="lg"
+              responsive={{
+                md: { direction: 'row', justify: 'around' }
+              }}
+              className="items-center"
+            >
+              <div className="text-center">
+                <h3 className="font-secondary font-semibold text-primary-brown mb-2">Location</h3>
+                <p className="font-secondary text-neutral-gray">East Legon, Ghana</p>
+              </div>
+              <div className="text-center">
+                <h3 className="font-secondary font-semibold text-primary-brown mb-2">Phone</h3>
+                <a 
+                  href="tel:+233257799736" 
+                  className="font-secondary text-neutral-gray hover:text-primary-brown transition-colors duration-200"
+                >
+                  +233 25 779 9736
+                </a>
+              </div>
+              <div className="text-center">
+                <h3 className="font-secondary font-semibold text-primary-brown mb-2">Hours</h3>
+                <p className="font-secondary text-neutral-gray">11:00 AM - 9:00 PM</p>
+              </div>
+            </Flex>
+            <div className="mt-8">
+              <button className="bg-button-secondary hover:bg-button-hover-secondary text-secondary-white px-8 py-4 rounded-lg font-medium transition-all duration-200 touch-target">
+                Make a Reservation
+              </button>
+            </div>
+          </div>
+        </Container>
+      </Section>
+    </PageWrapper>
   );
 }

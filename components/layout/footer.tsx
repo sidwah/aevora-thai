@@ -47,18 +47,18 @@ export default function Footer() {
             <a
               href={restaurantInfo.contact.phoneDialable}
               className={cn(
-                "flex items-center gap-2 font-secondary text-sm text-primary-dark transition-all duration-150",
+                "flex items-center gap-2 font-secondary text-sm text-neutral-gray transition-all duration-150",
                 "hover:text-primary-brown dark:hover:text-primary-brown",
-                "dark:text-primary-dark dark:text-shadow"
+                "dark:text-shadow"
               )}
             >
-              <Phone className="w-4 h-4 dark:text-primary-dark" />
+              <Phone className="w-4 h-4 text-neutral-gray dark:text-neutral-gray" />
               <span>{restaurantInfo.contact.phoneDisplay}</span>
             </a>
 
             <div className="flex items-center gap-2">
-              <MapPin className="w-4 h-4 text-neutral-gray dark:text-primary-dark dark:text-shadow" />
-              <p className="font-secondary text-sm text-neutral-gray dark:text-primary-dark dark:text-shadow">
+              <MapPin className="w-4 h-4 text-neutral-gray dark:text-neutral-gray dark:text-shadow" />
+              <p className="font-secondary text-sm text-neutral-gray dark:text-shadow">
                 {restaurantInfo.address.shortFormat}
               </p>
             </div>
@@ -84,9 +84,9 @@ export default function Footer() {
                   key={link.href}
                   href={link.href}
                   className={cn(
-                    "footer-nav-link font-secondary text-sm font-medium text-primary-dark",
+                    "footer-nav-link font-secondary text-sm font-medium text-neutral-gray",
                     "transition-all duration-150 hover:text-primary-brown",
-                    "dark:text-primary-dark dark:hover:text-primary-brown dark:text-shadow",
+                    "dark:hover:text-primary-brown dark:text-shadow",
                     "after:bg-primary-brown dark:after:bg-primary-brown"
                   )}
                 >
@@ -108,9 +108,9 @@ export default function Footer() {
                   rel="noopener noreferrer"
                   className={cn(
                     "glass-light p-2 rounded-lg transition-all duration-150",
-                    "text-primary-dark hover:glass-medium",
+                    "text-neutral-gray hover:glass-medium",
                     social.color,
-                    "dark:text-primary-dark dark:text-shadow",
+                    "dark:text-shadow",
                     "hover:scale-105 active:scale-95"
                   )}
                   aria-label={social.label}
@@ -127,8 +127,8 @@ export default function Footer() {
               rel="noopener noreferrer"
               className={cn(
                 "glass-light p-2 rounded-lg transition-all duration-150",
-                "text-primary-dark hover:glass-medium hover:text-green-600",
-                "dark:text-primary-dark dark:text-shadow",
+                "text-neutral-gray hover:glass-medium hover:text-green-600",
+                "dark:text-shadow",
                 "hover:scale-105 active:scale-95"
               )}
               aria-label="TripAdvisor"
@@ -153,7 +153,7 @@ export default function Footer() {
       {/* Copyright */}
       <div className="border-t border-neutral-light glass-cream transition-all duration-150">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
-          <p className="text-center font-secondary text-xs text-neutral-gray dark:text-primary-dark dark:text-shadow">
+          <p className="text-center font-secondary text-xs text-neutral-gray dark:text-shadow">
             Copyright © {currentYear} by {restaurantInfo.name}. All Rights Reserved
           </p>
         </div>

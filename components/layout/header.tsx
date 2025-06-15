@@ -1,8 +1,8 @@
+
 'use client';
 
 import { useState } from 'react';
 import Link from 'next/link';
-// import { useRouter } from 'next/navigation';
 import { Menu, X, ArrowRight } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { cn } from '@/lib/utils';
@@ -17,7 +17,6 @@ const navigationItems = [
 
 export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  // const router = useRouter();
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
@@ -102,7 +101,7 @@ export default function Header() {
                 onClick={toggleMobileMenu}
                 className={cn(
                   "lg:hidden p-2 rounded-lg glass-light transition-all duration-150",
-                  "text-primary-dark hover:text-primary-brown hover:glass-medium",
+                  "text-primary-dark dark:text-neutral-gray hover:text-primary-brown hover:glass-medium",
                   "hover:scale-105 active:scale-95"
                 )}
                 aria-label={isMobileMenuOpen ? 'Close menu' : 'Open menu'}
@@ -148,14 +147,14 @@ export default function Header() {
               <div className="flex flex-col h-full">
                 {/* Mobile Menu Header with Glass */}
                 <div className="flex items-center justify-between p-6 border-b border-primary-brown/10">
-                  <span className="text-lg font-primary font-bold text-primary-brown">
+                  <span className="text-lg font-primary font-bold text-neutral-gray dark:text-neutral-gray">
                     Menu
                   </span>
                   <button
                     onClick={toggleMobileMenu}
                     className={cn(
                       "p-2 rounded-lg glass-light transition-all duration-150",
-                      "text-primary-dark hover:text-primary-brown hover:glass-medium",
+                      "text-primary-dark dark:text-neutral-gray hover:text-primary-brown hover:glass-medium",
                       "hover:scale-105 active:scale-95"
                     )}
                     aria-label="Close menu"
