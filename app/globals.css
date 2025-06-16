@@ -879,3 +879,230 @@ html {
     transform: rotate(-2deg) scale(1.01);
   }
 }
+
+/* About Preview Section - Refined */
+
+/* Better image spacing and positioning */
+.about-visual-column {
+  padding-left: 2rem;
+}
+
+@media (max-width: 1024px) {
+  .about-visual-column {
+    padding-left: 0;
+    margin-top: 2rem;
+  }
+}
+
+/* Refined glass effects for closer positioning */
+.glass-medium {
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  background: rgba(255, 255, 255, 0.12);
+  border: 2px solid rgba(255, 255, 255, 0.25);
+  box-shadow: 
+    0 6px 24px rgba(0, 0, 0, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3);
+}
+
+.dark .glass-medium {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.15);
+  box-shadow: 
+    0 6px 24px rgba(0, 0, 0, 0.25),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+/* Optimized animations for closer layout */
+@keyframes subtle-float {
+  0%, 100% { 
+    transform: translateY(0px); 
+  }
+  50% { 
+    transform: translateY(-6px); 
+  }
+}
+
+.animate-subtle-float {
+  animation: subtle-float 6s ease-in-out infinite;
+}
+
+/* Content max-width for better readability */
+.about-content-text {
+  max-width: 28rem; /* 448px */
+}
+
+@media (max-width: 1024px) {
+  .about-content-text {
+    max-width: 100%;
+  }
+}
+
+/* Refined hover effects */
+.about-image-container:hover {
+  transform: rotate(2deg) scale(1.02);
+}
+
+.about-chef-portrait:hover {
+  transform: scale(1.05);
+  box-shadow: 
+    0 12px 32px rgba(0, 0, 0, 0.15),
+    inset 0 1px 0 rgba(255, 255, 255, 0.4);
+}
+
+/* Better responsive spacing */
+@media (max-width: 640px) {
+  .about-preview-spacing {
+    gap: 1.5rem;
+  }
+  
+  .about-image-height {
+    height: 20rem; /* 320px on mobile */
+  }
+}
+
+@media (min-width: 641px) and (max-width: 1023px) {
+  .about-image-height {
+    height: 28rem; /* 448px on tablet */
+  }
+}
+
+@media (min-width: 1024px) {
+  .about-image-height {
+    height: 31rem; /* 496px on desktop */
+  }
+}
+
+/* Custom width class for chef portrait - 10% increase */
+.w-88 {
+  width: 22rem; /* 352px - increased from 320px */
+}
+
+.h-88 {
+  height: 22rem; /* 352px - increased from 320px */
+}
+
+/* Ensure the visual column uses full width */
+.chef-visual-column {
+  position: relative;
+  width: 100%;
+}
+
+/* Badge positioning adjustments for wider layout */
+@media (min-width: 1024px) {
+  .experience-badge-edge {
+    right: 0;
+    transform: translateX(25%);
+  }
+}
+
+/* Responsive container adjustments */
+@media (max-width: 640px) {
+  .chef-portrait-mobile {
+    width: 20rem; /* 320px - increased from 288px */
+    height: 20rem;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 1023px) {
+  .chef-portrait-tablet {
+    width: 22rem; /* 352px - increased from 320px */
+    height: 22rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .chef-portrait-desktop {
+    width: 26.375rem; /* 422px - increased from 384px */
+    height: 26.375rem;
+  }
+}
+
+/* Enhanced responsive grid for better mobile layout */
+@media (min-width: 640px) {
+  .about-grid-responsive {
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .about-grid-responsive {
+    gap: 2rem;
+  }
+}
+
+/* Mobile-optimized text sizes */
+@media (max-width: 639px) {
+  .about-mobile-title {
+    font-size: clamp(1.25rem, 5vw, 1.5rem);
+    line-height: 1.3;
+  }
+  
+  .about-mobile-text {
+    font-size: clamp(0.875rem, 3.5vw, 0.9375rem);
+    line-height: 1.5;
+  }
+  
+  .about-mobile-button {
+    font-size: 0.875rem;
+    padding: 0.75rem 1.5rem;
+  }
+}
+
+/* Improved chef portrait mobile sizing */
+.chef-portrait-mobile {
+  width: 16rem !important; /* 256px */
+  height: 16rem !important;
+}
+
+@media (min-width: 640px) {
+  .chef-portrait-mobile {
+    width: 20rem !important; /* 320px */
+    height: 20rem !important;
+  }
+}
+
+/* Badge text responsive adjustments */
+@media (max-width: 639px) {
+  .badge-text-mobile {
+    font-size: 0.75rem;
+  }
+  
+  .badge-number-mobile {
+    font-size: 1rem;
+  }
+}
+
+/* Content column vertical centering */
+.content-column-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 20rem;
+}
+
+@media (min-width: 640px) {
+  .content-column-center {
+    min-height: 24rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .content-column-center {
+    min-height: 31.25rem; /* 500px */
+  }
+}
+
+/* Optimized spacing for mobile side-by-side */
+@media (max-width: 639px) {
+  .about-section-mobile {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+  
+  .about-container-mobile {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}

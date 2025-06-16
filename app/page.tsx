@@ -4,6 +4,7 @@ import PageWrapper from '@/components/layout/page-wrapper';
 import Grid from '@/components/layout/grid';
 import Flex from '@/components/layout/flex';
 import HeroSection from '@/components/sections/hero-section';
+import AboutPreview from '@/components/sections/about-preview';
 
 export default function Home() {
   return (
@@ -50,44 +51,7 @@ export default function Home() {
       </Section>
 
       {/* About Preview Section */}
-      <Section spacing="lg" background="none" id="about-preview">
-        <Grid 
-          cols={1} 
-          gap="xl"
-          responsive={{
-            lg: 2
-          }}
-          className="items-center"
-        >
-          <div className="glass-panel p-8 lg:p-12">
-            <h2 className="font-primary text-fluid-3xl font-bold text-primary-brown mb-6">
-              Tradition & Family Recipes
-            </h2>
-            <p className="font-secondary text-fluid-base text-neutral-gray mb-6 leading-relaxed">
-              Our culinary journey began in the heart of Thailand, where our founder learned the art of authentic Thai cooking from her grandmother. Each dish tells a story of tradition, passion, and the finest ingredients.
-            </p>
-            <p className="font-secondary text-fluid-base text-neutral-gray mb-8 leading-relaxed">
-              Today, we bring these cherished family recipes to East Legon, creating an ambient dining experience that honors the rich heritage of Thai cuisine while embracing contemporary elegance.
-            </p>
-            <Flex gap="md" className="mobile-stack">
-              <button className="bg-button-primary hover:bg-button-hover-primary text-secondary-white px-6 py-3 rounded-lg font-medium transition-all duration-200 touch-target">
-                Our Story
-              </button>
-              <button className="glass-light hover:glass-medium text-primary-dark px-6 py-3 rounded-lg font-medium transition-all duration-200 touch-target">
-                View Gallery
-              </button>
-            </Flex>
-          </div>
-          
-          <div className="glass-card p-6">
-            <div className="aspect-[4/3] rounded-lg bg-secondary-warm-brown/10 flex items-center justify-center">
-              <span className="text-secondary-warm-brown font-secondary text-sm">
-                Restaurant Interior Image
-              </span>
-            </div>
-          </div>
-        </Grid>
-      </Section>
+      <AboutPreview />
 
       {/* Contact Preview Section */}
       <Section spacing="md" background="glass-light" id="contact-preview">
