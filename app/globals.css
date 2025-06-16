@@ -692,3 +692,190 @@ html {
     display: none !important;
   }
 }
+
+/* Gallery Card Specific Styles */
+.gallery-card-glow {
+  box-shadow: 
+    0 10px 40px rgba(44, 62, 80, 0.3),
+    0 0 0 1px rgba(255, 255, 255, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+.gallery-card-glow:hover {
+  box-shadow: 
+    0 20px 60px rgba(44, 62, 80, 0.4),
+    0 0 0 1px rgba(181, 149, 107, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+/* Floating animation for gallery card */
+@keyframes float-gentle {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
+}
+
+.float-gentle {
+  animation: float-gentle 4s ease-in-out infinite;
+}
+
+/* More Organic Shape - Matching Reference */
+.organic-shape-reference {
+  border-radius: 40% 60% 35% 65% / 50% 45% 55% 50%;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(8px);
+  transition: all 0.6s ease;
+  overflow: hidden;
+  /* More flowing, less round */
+  transform: rotate(-8deg);
+}
+
+.organic-shape-reference:hover {
+  border-radius: 35% 65% 40% 60% / 45% 50% 50% 55%;
+  transform: rotate(-6deg) scale(1.02);
+}
+
+/* Adjusted bowl positioning */
+.gentle-float {
+  animation: gentle-float 8s ease-in-out infinite;
+}
+
+.gentle-float:nth-child(odd) {
+  animation-delay: 1s;
+  animation-duration: 10s;
+}
+
+.gentle-float:nth-child(even) {
+  animation-delay: 3s;
+  animation-duration: 9s;
+}
+
+@keyframes gentle-float {
+  0%, 100% { 
+    transform: translateY(0px) rotate(0deg); 
+  }
+  33% { 
+    transform: translateY(-12px) rotate(2deg); 
+  }
+  66% { 
+    transform: translateY(-6px) rotate(-1deg); 
+  }
+}
+
+.floating-bowl-shadow::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  padding: 1px;
+  background: linear-gradient(135deg, rgba(255,255,255,0.1), rgba(0,0,0,0.05));
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask-composite: xor;
+  -webkit-mask-composite: xor;
+  pointer-events: none;
+}
+
+.floating-bowl-shadow-hover {
+  box-shadow: 
+    /* Enhanced shadow on hover */
+    0 12px 35px rgba(0, 0, 0, 0.2),
+    0 6px 15px rgba(0, 0, 0, 0.12),
+    0 3px 6px rgba(0, 0, 0, 0.1);
+  
+  transform: translateY(-2px);
+}
+
+/* Secondary shadow layer */
+.secondary-shadow {
+  box-shadow: 
+    0 15px 40px rgba(0, 0, 0, 0.08),
+    0 8px 20px rgba(0, 0, 0, 0.05);
+  filter: blur(1px);
+  opacity: 0.6;
+}
+
+/* Gentle floating animation */
+@keyframes gentle-float {
+  0%, 100% { 
+    transform: translateY(0px) rotate(0deg); 
+  }
+  50% { 
+    transform: translateY(-6px) rotate(1deg); 
+  }
+}
+
+.gentle-float {
+  animation: gentle-float 4s ease-in-out infinite;
+}
+
+.gentle-float:nth-child(2) {
+  animation-delay: 1.5s;
+  animation-duration: 5s;
+}
+
+/* Alternative shadow style - more dramatic */
+.floating-bowl-dramatic {
+  box-shadow: 
+    0 20px 60px rgba(0, 0, 0, 0.15),
+    0 8px 25px rgba(0, 0, 0, 0.08),
+    0 4px 10px rgba(0, 0, 0, 0.05);
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.1));
+}
+
+/* Context-aware shadows based on background */
+.floating-bowl-on-light {
+  box-shadow: 
+    0 8px 25px rgba(0, 0, 0, 0.12),
+    0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+.floating-bowl-on-dark {
+  box-shadow: 
+    0 8px 25px rgba(0, 0, 0, 0.3),
+    0 4px 10px rgba(0, 0, 0, 0.2),
+    /* Add light rim for contrast on dark */
+    inset 0 0 0 1px rgba(255, 255, 255, 0.1);
+}
+
+/* Enhanced Floating Bowl Shadows */
+.floating-bowl-shadow {
+  box-shadow: 
+    0 12px 30px rgba(0, 0, 0, 0.18),
+    0 6px 15px rgba(0, 0, 0, 0.12),
+    0 3px 6px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.floating-bowl-shadow:hover {
+  box-shadow: 
+    0 16px 40px rgba(0, 0, 0, 0.22),
+    0 8px 20px rgba(0, 0, 0, 0.15),
+    0 4px 8px rgba(0, 0, 0, 0.1);
+  transform: translateY(-3px);
+}
+
+/* More organic restaurant shape for larger size */
+.organic-shape-reference {
+  border-radius: 45% 55% 40% 60% / 55% 45% 60% 40%;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  transition: all 0.6s ease;
+  overflow: hidden;
+  transform: rotate(-6deg); /* Less rotation for larger size */
+}
+
+.organic-shape-reference:hover {
+  border-radius: 40% 60% 45% 55% / 50% 50% 55% 45%;
+  transform: rotate(-4deg) scale(1.02);
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+  .organic-shape-reference {
+    transform: rotate(-4deg); /* Even less rotation on mobile */
+  }
+  
+  .organic-shape-reference:hover {
+    transform: rotate(-2deg) scale(1.01);
+  }
+}

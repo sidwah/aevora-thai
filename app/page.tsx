@@ -3,48 +3,14 @@ import Section from '@/components/layout/section';
 import PageWrapper from '@/components/layout/page-wrapper';
 import Grid from '@/components/layout/grid';
 import Flex from '@/components/layout/flex';
+import HeroSection from '@/components/sections/hero-section';
 
 export default function Home() {
   return (
     <PageWrapper background="glass" decorativeElements>
       {/* Hero Section */}
-      <Section spacing="xl" background="none" id="hero">
-        <Flex 
-          direction="col" 
-          align="center" 
-          justify="center"
-          gap="lg"
-          className="min-h-[80vh] text-center"
-          responsive={{
-            lg: { direction: 'row', justify: 'between', align: 'center' }
-          }}
-        >
-          <div className="glass-card p-8 lg:p-12 max-w-2xl">
-            <h1 className="font-primary text-fluid-4xl font-bold text-primary-brown mb-6 hero-text-gradient">
-              An Ambient Dining Experience
-            </h1>
-            <p className="font-secondary text-fluid-lg text-neutral-gray mb-8 leading-relaxed">
-              Discover authentic Thai cuisine in the heart of East Legon. Where traditional recipes meet contemporary elegance.
-            </p>
-            <Flex gap="md" justify="center" className="mobile-stack">
-              <button className="bg-button-secondary hover:bg-button-hover-secondary text-secondary-white px-8 py-4 rounded-lg font-medium transition-all duration-200 touch-target">
-                View Menu
-              </button>
-              <button className="glass-light hover:glass-medium text-primary-dark px-8 py-4 rounded-lg font-medium transition-all duration-200 touch-target">
-                Book a Table
-              </button>
-            </Flex>
-          </div>
-          <div className="glass-panel p-6 lg:p-8 max-w-md">
-            <div className="aspect-square rounded-lg bg-primary-brown/10 flex items-center justify-center">
-              <span className="text-primary-brown font-secondary text-sm">
-                Hero Image Placeholder
-              </span>
-            </div>
-          </div>
-        </Flex>
-      </Section>
-
+      <HeroSection />
+      
       {/* Menu Preview Section */}
       <Section spacing="lg" background="glass-light" id="menu-preview">
         <div className="text-center mb-12">
