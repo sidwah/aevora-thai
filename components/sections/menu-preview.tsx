@@ -27,7 +27,8 @@ export default function MenuPreview() {
             className={cn(
               "font-primary font-bold text-primary-dark text-center mb-6",
               "text-2xl sm:text-3xl",
-              "leading-tight"
+              "leading-tight", 
+              "dark:text-white"
             )}
           >
             {menuHeroContent.title}
@@ -141,7 +142,8 @@ export default function MenuPreview() {
                   className={cn(
                     "font-primary font-bold text-primary-dark",
                     "text-3xl lg:text-4xl xl:text-5xl",
-                    "leading-tight"
+                    "leading-tight",
+                    "dark:text-white"
                   )}
                 >
                   {menuHeroContent.title}

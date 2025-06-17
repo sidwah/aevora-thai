@@ -7,6 +7,7 @@ import HeroSection from '@/components/sections/hero-section';
 import AboutPreview from '@/components/sections/about-preview';
 import MenuPreview from '@/components/sections/menu-preview';
 import HeritageSection from '@/components/sections/heritage-section';
+import TestimonialsSection from '@/components/sections/testimonials';
 
 export default function Home() {
   return (
@@ -22,6 +23,9 @@ export default function Home() {
 
       {/* Heritage Section */}
       <HeritageSection />
+
+      {/* Testimonials Section */}
+      <TestimonialsSection />
 
       {/* Contact Preview Section */}
       <Section spacing="md" background="glass-light" id="contact-preview">

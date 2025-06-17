@@ -1225,3 +1225,40 @@ html {
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
+
+/* Testimonials specific styles */
+.testimonials-section {
+  position: relative;
+}
+
+/* Ensure smooth transitions */
+.testimonial-content {
+  transition: all 0.4s ease-in-out;
+}
+
+/* Star rating animations */
+.star-rating svg {
+  transition: all 0.2s ease-in-out;
+}
+
+.star-rating svg:hover {
+  transform: scale(1.1);
+}
+
+/* Navigation button styles */
+.testimonial-nav-button {
+  transition: all 0.2s ease-in-out;
+}
+
+.testimonial-nav-button:hover {
+  transform: scale(1.1);
+}
+
+/* Indicator styles */
+.testimonial-indicator {
+  transition: all 0.3s ease-in-out;
+}
+
+.testimonial-indicator.active {
+  transform: scaleX(4);
+}

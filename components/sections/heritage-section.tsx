@@ -32,7 +32,8 @@ export default function HeritageSection() {
             <h2 className={cn(
               "font-primary font-bold text-primary-dark",
               "text-2xl sm:text-3xl",
-              "leading-tight"
+              "leading-tight",
+              "dark:text-white"
             )}>
               Tradition & Family
               <br />
@@ -204,7 +205,8 @@ export default function HeritageSection() {
                   <h2 className={cn(
                     "font-primary font-bold text-primary-dark",
                     "text-3xl lg:text-4xl xl:text-5xl",
-                    "leading-tight"
+                    "leading-tight",
+                    "dark:text-white"
                   )}>
                     Tradition & Family
                     <br />
