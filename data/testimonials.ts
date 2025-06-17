@@ -14,7 +14,7 @@ export interface Testimonial {
       id: '1',
       rating: 5,
       title: "My favorite Thai place in Geneva!",
-      comment: "I love this restaurant because it's calm and authentic. The service is excellent and I've always enjoyed the variety of dishes they offer.",
+      comment: "I love this restaurant because it is calm and authentic. The service is excellent and I have always enjoyed the variety of dishes they offer.",
       customerName: "Michael Arkoh",
       location: "Geneva, Switzerland",
       date: "2024-03-15"
@@ -32,7 +32,7 @@ export interface Testimonial {
       id: '3',
       rating: 5,
       title: "Best Thai food in East Legon!",
-      comment: "Outstanding service and incredible food. The chef's expertise really shows in every bite. We'll definitely be coming back regularly!",
+      comment: "Outstanding service and incredible food. The chef is an expert and it really shows in every bite. We will definitely be coming back regularly!",
       customerName: "Kwame Asante",
       location: "East Legon, Accra",
       date: "2024-03-08"
@@ -50,7 +50,7 @@ export interface Testimonial {
       id: '5',
       rating: 5,
       title: "Authentic Thai cuisine at its finest",
-      comment: "As someone who has traveled extensively in Thailand, I can confidently say this restaurant serves the most authentic Thai food I've found in Ghana.",
+      comment: "As someone who has traveled extensively in Thailand, I can confidently say this restaurant serves the most authentic Thai food I have found in Ghana.",
       customerName: "David Chen",
       location: "Cantonments, Accra",
       date: "2024-03-01"

@@ -31,7 +31,7 @@ export default function AboutPreview() {
               </span>
             </div>
             
-            <h2 className="font-primary text-2xl sm:text-3xl font-bold text-primary-dark dark:text-white leading-tight">
+            <h2 className="font-primary text-2xl sm:text-3xl font-bold text-primary-dark  leading-tight">
               Authentic Thai Heritage
               <br />
               <span className="text-primary-brown">In Every Dish</span>
@@ -173,7 +173,7 @@ export default function AboutPreview() {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.3, duration: 0.6 }}
-                  className="font-primary text-4xl xl:text-5xl font-bold text-primary-dark dark:text-white leading-tight"
+                  className="font-primary text-4xl xl:text-5xl font-bold text-neutral-gray leading-tight"
                 >
                   Authentic Thai Heritage
                   <br />

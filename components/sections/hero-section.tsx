@@ -25,9 +25,8 @@ export default function HeroSection() {
           >
             <h1 className={cn(
               "font-primary text-3xl sm:text-4xl font-bold",
-              "text-primary-dark leading-tight",
-              "tracking-tight",
-              "dark:text-white"
+              "text-neutral-gray leading-tight",
+              "tracking-tight"
             )}>
               An Ambient
               <br />
@@ -189,9 +188,8 @@ export default function HeroSection() {
             >
               <h1 className={cn(
                 "font-primary text-5xl xl:text-6xl font-bold",
-                "text-primary-dark leading-tight",
-                "tracking-tight",
-                "dark:text-white"
+                "text-neutral-gray leading-tight",
+                "tracking-tight"
               )}>
                 An Ambient
                 <br />

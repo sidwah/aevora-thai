@@ -68,10 +68,9 @@ export default function MenuCategoryCard({
           {/* Content */}
           <div className="p-4 lg:p-6">
             <h3 className={cn(
-              "font-primary font-semibold text-primary-dark mb-3",
+              "font-primary font-semibold text-neutral-gray mb-3",
               "text-lg sm:text-xl lg:text-lg xl:text-xl",
-              "group-hover:text-primary-brown transition-colors duration-200",
-              "dark:text-white"
+              "group-hover:text-primary-brown transition-colors duration-200"
             )}>
               {name}
             </h3>

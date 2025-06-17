@@ -18,7 +18,9 @@ const TestimonialsSection: React.FC = () => {
   };
 
   const prevTestimonial = () => {
-    setCurrentIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length);
+    setCurrentIndex(
+      (prev) => (prev - 1 + testimonials.length) % testimonials.length
+    );
   };
 
   const currentTestimonial = testimonials[currentIndex];
@@ -26,36 +28,36 @@ const TestimonialsSection: React.FC = () => {
   return (
     <Section spacing="xl" background="none" id="testimonials">
       <Container size="lg">
-        <div className="relative max-w-4xl mx-auto text-center">
+        <div className="relative mx-auto max-w-4xl text-center">
           {/* Navigation Arrows */}
           <button
             onClick={prevTestimonial}
             className={cn(
-              "absolute left-0 top-1/2 transform -translate-y-1/2 -translate-x-4",
-              "lg:-translate-x-12 xl:-translate-x-16",
-              "p-2 rounded-full transition-all duration-200",
-              "hover:bg-primary-cream/50 hover:scale-110",
-              "text-neutral-gray hover:text-primary-brown",
-              "focus:outline-none focus:ring-2 focus:ring-primary-brown focus:ring-opacity-50"
+              'absolute top-1/2 left-0 -translate-x-4 -translate-y-1/2 transform',
+              'lg:-translate-x-12 xl:-translate-x-16',
+              'rounded-full p-2 transition-all duration-200',
+              'hover:bg-primary-cream/50 hover:scale-110',
+              'text-neutral-gray hover:text-primary-brown',
+              'focus:ring-primary-brown focus:ring-opacity-50 focus:ring-2 focus:outline-none'
             )}
             aria-label="Previous testimonial"
           >
-            <ChevronLeft className="w-6 h-6" />
+            <ChevronLeft className="h-6 w-6" />
           </button>
 
           <button
             onClick={nextTestimonial}
             className={cn(
-              "absolute right-0 top-1/2 transform -translate-y-1/2 translate-x-4",
-              "lg:translate-x-12 xl:translate-x-16",
-              "p-2 rounded-full transition-all duration-200",
-              "hover:bg-primary-cream/50 hover:scale-110",
-              "text-neutral-gray hover:text-primary-brown",
-              "focus:outline-none focus:ring-2 focus:ring-primary-brown focus:ring-opacity-50"
+              'absolute top-1/2 right-0 translate-x-4 -translate-y-1/2 transform',
+              'lg:translate-x-12 xl:translate-x-16',
+              'rounded-full p-2 transition-all duration-200',
+              'hover:bg-primary-cream/50 hover:scale-110',
+              'text-neutral-gray hover:text-primary-brown',
+              'focus:ring-primary-brown focus:ring-opacity-50 focus:ring-2 focus:outline-none'
             )}
             aria-label="Next testimonial"
           >
-            <ChevronRight className="w-6 h-6" />
+            <ChevronRight className="h-6 w-6" />
           </button>
 
           {/* Testimonial Content */}
@@ -65,34 +67,34 @@ const TestimonialsSection: React.FC = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
-              transition={{ duration: 0.4, ease: "easeInOut" }}
+              transition={{ duration: 0.4, ease: 'easeInOut' }}
               className="px-8 lg:px-16"
             >
               {/* Star Rating */}
-              <div className="flex justify-center mb-6">
+              <div className="mb-6 flex justify-center">
                 <StarRating rating={currentTestimonial.rating} size="lg" />
               </div>
 
               {/* Testimonial Title (if exists) */}
               {currentTestimonial.title && (
-                <h3 className="font-primary text-xl sm:text-2xl lg:text-3xl font-semibold text-primary-brown mb-6">
+                <h3 className="font-primary text-primary-brown mb-6 text-xl font-semibold sm:text-2xl lg:text-3xl">
                   {currentTestimonial.title}
                 </h3>
               )}
 
               {/* Testimonial Comment - WHITE in dark mode */}
-              <blockquote className="font-secondary text-lg sm:text-xl lg:text-2xl leading-relaxed text-primary-dark dark:text-white mb-8 max-w-3xl mx-auto">
-                "{currentTestimonial.comment}"
+              <blockquote className="font-secondary text-neutral-gray mx-auto mb-8 max-w-3xl text-lg leading-relaxed sm:text-xl lg:text-2xl">
+                &quot;{currentTestimonial.comment}&quot;
               </blockquote>
 
               {/* Customer Attribution */}
               <div className="space-y-1">
                 {/* Customer Name - WHITE in dark mode */}
-                <p className="font-secondary font-semibold text-base lg:text-lg text-primary-dark dark:text-white">
+                <p className="font-secondary text-neutral-gray text-base font-semibold lg:text-lg">
                   {currentTestimonial.customerName}
                 </p>
                 {/* Location - Keep gray */}
-                <p className="font-secondary text-sm lg:text-base text-neutral-gray">
+                <p className="font-secondary text-neutral-gray text-sm lg:text-base">
                   {currentTestimonial.location}
                 </p>
               </div>
@@ -100,16 +102,16 @@ const TestimonialsSection: React.FC = () => {
           </AnimatePresence>
 
           {/* Testimonial Indicators */}
-          <div className="flex justify-center mt-8 space-x-2">
+          <div className="mt-8 flex justify-center space-x-2">
             {testimonials.map((_, index) => (
               <button
                 key={index}
                 onClick={() => setCurrentIndex(index)}
                 className={cn(
-                  "w-2 h-2 rounded-full transition-all duration-200",
-                  index === currentIndex 
-                    ? "bg-primary-brown w-8" 
-                    : "bg-neutral-gray/30 hover:bg-neutral-gray/50"
+                  'h-2 w-2 rounded-full transition-all duration-200',
+                  index === currentIndex
+                    ? 'bg-primary-brown w-8'
+                    : 'bg-neutral-gray/30 hover:bg-neutral-gray/50'
                 )}
                 aria-label={`Go to testimonial ${index + 1}`}
               />

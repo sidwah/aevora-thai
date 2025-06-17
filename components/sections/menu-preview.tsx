@@ -25,10 +25,9 @@ export default function MenuPreview() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1, duration: 0.6 }}
             className={cn(
-              "font-primary font-bold text-primary-dark text-center mb-6",
+              "font-primary font-bold text-neutral-gray text-center mb-6",
               "text-2xl sm:text-3xl",
-              "leading-tight", 
-              "dark:text-white"
+              "leading-tight"
             )}
           >
             {menuHeroContent.title}
@@ -140,10 +139,9 @@ export default function MenuPreview() {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.3, duration: 0.6 }}
                   className={cn(
-                    "font-primary font-bold text-primary-dark",
+                    "font-primary font-bold text-neutral-gray",
                     "text-3xl lg:text-4xl xl:text-5xl",
-                    "leading-tight",
-                    "dark:text-white"
+                    "leading-tight"
                   )}
                 >
                   {menuHeroContent.title}
