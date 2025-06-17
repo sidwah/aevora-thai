@@ -94,7 +94,7 @@ body {
   background-color: var(--color-primary-cream);
   color: var(--color-primary-dark);
   line-height: 1.6;
-  transition: background-color 150ms ease, color 150ms ease;
+  transition: background-color 100ms ease, color 100ms ease;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -105,7 +105,7 @@ h1, h2, h3, h4, h5, h6 {
 /* Faster transitions for better performance */
 * {
   transition-property: background-color, border-color, color, fill, stroke;
-  transition-duration: 150ms;
+  transition-duration: 50ms;
   transition-timing-function: ease-out;
 }
 
