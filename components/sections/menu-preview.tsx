@@ -33,7 +33,7 @@ export default function MenuPreview() {
             {menuHeroContent.title}
           </motion.h2>
 
-          {/* Mobile Hero Image - Moved before description */}
+          {/* Mobile Hero Image */}
           <motion.div 
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -59,7 +59,7 @@ export default function MenuPreview() {
             </div>
           </motion.div>
 
-          {/* Mobile Description - Moved after hero image */}
+          {/* Mobile Description */}
           <motion.p 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -74,17 +74,17 @@ export default function MenuPreview() {
           </motion.p>
         </div>
 
-        {/* Desktop Layout: Two Columns */}
+        {/* Desktop Layout: Image Left, Content Right */}
         <div className="hidden lg:block mb-16 lg:mb-20">
-          <Grid cols={1} responsive={{ lg: 2 }} gap="xl" className="items-center">
-            {/* Visual Column - Left */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 xl:gap-16 items-center">
+            {/* Image Column - LEFT (First in source order for lg+) */}
             <motion.div 
               initial={{ opacity: 0, x: -50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, ease: "easeOut" }}
-              className="relative"
+              className="relative lg:order-1"
             >
-              {/* Desktop Main Image - Reduced size to match text height */}
+              {/* Desktop Main Image */}
               <div className="w-full lg:h-[320px] xl:h-[360px] rounded-3xl overflow-hidden shadow-2xl glass-medium">
                 <Image
                   src="/images/menu/hero-pad-thai.jpg"
@@ -125,12 +125,12 @@ export default function MenuPreview() {
               </div>
             </motion.div>
 
-            {/* Desktop Content Column - Right */}
+            {/* Content Column - RIGHT (Second in source order for lg+) */}
             <motion.div 
               initial={{ opacity: 0, x: 50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
-              className="lg:pl-8 xl:pl-12"
+              className="lg:order-2 lg:pl-8 xl:pl-12"
             >
               <div className="space-y-6 lg:space-y-8">
                 {/* Desktop Title */}
@@ -162,7 +162,7 @@ export default function MenuPreview() {
                 </motion.p>
               </div>
             </motion.div>
-          </Grid>
+          </div>
         </div>
 
         {/* Category Cards Section */}
@@ -183,7 +183,7 @@ export default function MenuPreview() {
           </Grid>
         </motion.div>
 
-        {/* See More / Explore Menu Button */}
+        {/* Explore Menu Button */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}

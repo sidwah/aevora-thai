@@ -6,6 +6,7 @@ import Flex from '@/components/layout/flex';
 import HeroSection from '@/components/sections/hero-section';
 import AboutPreview from '@/components/sections/about-preview';
 import MenuPreview from '@/components/sections/menu-preview';
+import HeritageSection from '@/components/sections/heritage-section';
 
 export default function Home() {
   return (
@@ -18,6 +19,9 @@ export default function Home() {
 
       {/* About Preview Section */}
       <AboutPreview />
+
+      {/* Heritage Section */}
+      <HeritageSection />
 
       {/* Contact Preview Section */}
       <Section spacing="md" background="glass-light" id="contact-preview">

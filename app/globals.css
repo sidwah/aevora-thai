@@ -1200,3 +1200,28 @@ html {
 .dark .see-more-button:hover {
   box-shadow: 0 10px 30px rgba(230, 200, 150, 0.4);
 }
+
+/* Heritage Section Styles */
+.heritage-section-bg {
+  background: var(--color-primary-cream);
+}
+
+.dark .heritage-section-bg {
+  background: var(--color-primary-cream);
+}
+
+/* Enhanced decorative elements for heritage */
+.heritage-decorative {
+  background: linear-gradient(135deg, var(--color-primary-brown), var(--color-accent-gold));
+  border-radius: 50%;
+  filter: blur(20px);
+  opacity: 0.1;
+}
+
+/* Cultural symbol styling */
+.thai-symbol {
+  background: linear-gradient(135deg, var(--color-primary-brown), var(--color-accent-gold));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
