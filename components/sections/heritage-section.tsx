@@ -30,7 +30,7 @@ export default function HeritageSection() {
               </span>
             </div>
             <h2 className={cn(
-              "font-primary font-bold text-neutral-gray",
+              "font-primary font-bold ",
               "text-2xl sm:text-3xl",
               "leading-tight"
             )}>
@@ -202,7 +202,7 @@ export default function HeritageSection() {
                     </span>
                   </div>
                   <h2 className={cn(
-                    "font-primary font-bold text-neutral-gray",
+                    "font-primary font-bold",
                     "text-3xl lg:text-4xl xl:text-5xl",
                     "leading-tight"
                   )}>
@@ -220,7 +220,7 @@ export default function HeritageSection() {
                   className="space-y-4 lg:space-y-6"
                 >
                   <p className={cn(
-                    "font-secondary text-neutral-gray leading-relaxed",
+                    "font-secondary  leading-relaxed",
                     "text-lg lg:text-xl",
                     "max-w-lg"
                   )}>
@@ -229,7 +229,7 @@ export default function HeritageSection() {
                   </p>
                   
                   <p className={cn(
-                    "font-secondary text-neutral-gray leading-relaxed",
+                    "font-secondary  leading-relaxed",
                     "text-base lg:text-lg",
                     "max-w-lg"
                   )}>
@@ -238,7 +238,7 @@ export default function HeritageSection() {
                   </p>
                   
                   <p className={cn(
-                    "font-secondary text-neutral-gray leading-relaxed",
+                    "font-secondary leading-relaxed",
                     "text-base lg:text-lg",
                     "max-w-lg"
                   )}>

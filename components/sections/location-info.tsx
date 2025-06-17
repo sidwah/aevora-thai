@@ -53,11 +53,11 @@ const LocationInfoSection = () => {
             >
               <div className="flex items-center gap-2 mb-3">
                 <MapPin className="w-5 h-5 text-primary-brown" />
-                <span className="font-secondary text-sm uppercase tracking-wider text-white/90">
+                <span className="font-secondary text-sm uppercase tracking-wider ">
                   Find Us
                 </span>
               </div>
-              <h2 className="font-primary text-2xl lg:text-3xl font-bold text-white mb-2">
+              <h2 className="font-primary text-2xl lg:text-3xl font-bold mb-2">
                 Visit Our
                 <br />
                 <span className="text-primary-brown">Restaurant</span>
@@ -75,7 +75,7 @@ const LocationInfoSection = () => {
               <div className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 text-primary-brown mt-0.5 flex-shrink-0" />
                 <div>
-                  <p className="font-secondary font-medium text-white/95">
+                  <p className="font-secondary font-medium">
                     {locationInfo.restaurant.address.formatted}
                   </p>
                 </div>
@@ -86,7 +86,7 @@ const LocationInfoSection = () => {
                 <Phone className="w-5 h-5 text-primary-brown flex-shrink-0" />
                 <a 
                   href={locationInfo.contact.phoneDialable}
-                  className="font-secondary text-white/95 hover:text-primary-brown transition-colors duration-200"
+                  className="font-secondary  hover:text-primary-brown transition-colors duration-200"
                 >
                   {locationInfo.contact.phoneDisplay}
                 </a>
@@ -97,7 +97,7 @@ const LocationInfoSection = () => {
                 <Mail className="w-5 h-5 text-primary-brown flex-shrink-0" />
                 <a 
                   href={`mailto:${locationInfo.contact.email}`}
-                  className="font-secondary text-white/95 hover:text-primary-brown transition-colors duration-200"
+                  className="font-secondary  hover:text-primary-brown transition-colors duration-200"
                 >
                   {locationInfo.contact.email}
                 </a>
@@ -113,32 +113,32 @@ const LocationInfoSection = () => {
             >
               <div className="flex items-center gap-2 mb-3">
                 <Clock className="w-5 h-5 text-primary-brown" />
-                <span className="font-secondary font-semibold text-white/95">
+                <span className="font-secondary font-semibold ">
                   Opening Hours
                 </span>
               </div>
               <div className="space-y-2">
                 <div className="flex justify-between">
-                  <span className="font-secondary text-sm text-white/75">
+                  <span className="font-secondary text-sm ">
                     {locationInfo.hours.weekdays.label}
                   </span>
-                  <span className="font-secondary text-sm text-white/95">
+                  <span className="font-secondary text-sm ">
                     {locationInfo.hours.weekdays.time}
                   </span>
                 </div>
                 <div className="flex justify-between">
-                  <span className="font-secondary text-sm text-white/75">
+                  <span className="font-secondary text-sm ">
                     {locationInfo.hours.friday.label}
                   </span>
-                  <span className="font-secondary text-sm text-white/95">
+                  <span className="font-secondary text-sm">
                     {locationInfo.hours.friday.time}
                   </span>
                 </div>
                 <div className="flex justify-between">
-                  <span className="font-secondary text-sm text-white/75">
+                  <span className="font-secondary text-sm ">
                     {locationInfo.hours.weekend.label}
                   </span>
-                  <span className="font-secondary text-sm text-white/95">
+                  <span className="font-secondary text-sm">
                     {locationInfo.hours.weekend.time}
                   </span>
                 </div>

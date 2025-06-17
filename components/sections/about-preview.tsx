@@ -31,7 +31,7 @@ export default function AboutPreview() {
               </span>
             </div>
             
-            <h2 className="font-primary text-2xl sm:text-3xl font-bold text-primary-dark  leading-tight">
+            <h2 className="font-primary text-2xl sm:text-3xl font-bold leading-tight">
               Authentic Thai Heritage
               <br />
               <span className="text-primary-brown">In Every Dish</span>
@@ -109,7 +109,7 @@ export default function AboutPreview() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3, duration: 0.6 }}
-            className="font-secondary text-base sm:text-lg text-neutral-gray leading-relaxed text-center max-w-2xl mx-auto"
+            className="font-secondary text-base sm:text-lg leading-relaxed text-center max-w-2xl mx-auto"
           >
             Founded with a passion for bringing authentic Thai flavors to East Legon, 
             Aevora Thai represents three generations of culinary expertise. Our commitment 
@@ -173,7 +173,7 @@ export default function AboutPreview() {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.3, duration: 0.6 }}
-                  className="font-primary text-4xl xl:text-5xl font-bold text-neutral-gray leading-tight"
+                  className="font-primary text-4xl xl:text-5xl font-bold leading-tight"
                 >
                   Authentic Thai Heritage
                   <br />
@@ -186,7 +186,7 @@ export default function AboutPreview() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.4, duration: 0.6 }}
-                className="font-secondary text-xl text-neutral-gray leading-relaxed max-w-lg"
+                className="font-secondary text-xl leading-relaxed max-w-lg"
               >
                 Founded with a passion for bringing authentic Thai flavors to East Legon, 
                 Aevora Thai represents three generations of culinary expertise. Our commitment 
@@ -264,7 +264,7 @@ export default function AboutPreview() {
                   )}
                 >
                   <div className="text-center">
-                    <div className="font-primary text-2xl font-bold text-primary-brown">25+</div>
+                    <div className="font-primary text-2xl font-bold">25+</div>
                     <div className="font-secondary text-sm text-primary-dark font-medium">Years Experience</div>
                   </div>
                 </motion.div>
@@ -283,7 +283,7 @@ export default function AboutPreview() {
                   )}
                 >
                   <div className="text-center">
-                    <div className="font-primary text-base font-bold text-primary-brown">Head Chef</div>
+                    <div className="font-primary text-base font-bold">Head Chef</div>
                     <div className="font-secondary text-sm text-primary-dark font-medium">& Founder</div>
                   </div>
                 </motion.div>

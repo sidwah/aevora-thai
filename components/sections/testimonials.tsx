@@ -83,7 +83,7 @@ const TestimonialsSection: React.FC = () => {
               )}
 
               {/* Testimonial Comment - WHITE in dark mode */}
-              <blockquote className="font-secondary text-neutral-gray mx-auto mb-8 max-w-3xl text-lg leading-relaxed sm:text-xl lg:text-2xl">
+              <blockquote className="font-secondary mx-auto mb-8 max-w-3xl text-lg leading-relaxed sm:text-xl lg:text-2xl">
                 &quot;{currentTestimonial.comment}&quot;
               </blockquote>
 

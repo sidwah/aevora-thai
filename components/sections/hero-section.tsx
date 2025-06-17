@@ -25,7 +25,7 @@ export default function HeroSection() {
           >
             <h1 className={cn(
               "font-primary text-3xl sm:text-4xl font-bold",
-              "text-neutral-gray leading-tight",
+              " leading-tight",
               "tracking-tight"
             )}>
               An Ambient
@@ -188,7 +188,7 @@ export default function HeroSection() {
             >
               <h1 className={cn(
                 "font-primary text-5xl xl:text-6xl font-bold",
-                "text-neutral-gray leading-tight",
+                "leading-tight",
                 "tracking-tight"
               )}>
                 An Ambient
@@ -206,7 +206,7 @@ export default function HeroSection() {
             >
               <p className={cn(
                 "font-secondary text-xl",
-                "text-neutral-gray leading-relaxed",
+                "leading-relaxed",
                 "max-w-md"
               )}>
                 Join us at the table as you dine for the perfect meal. 

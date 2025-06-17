@@ -139,7 +139,7 @@ export default function MenuPreview() {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.3, duration: 0.6 }}
                   className={cn(
-                    "font-primary font-bold text-neutral-gray",
+                    "font-primary font-bold",
                     "text-3xl lg:text-4xl xl:text-5xl",
                     "leading-tight"
                   )}
@@ -153,7 +153,7 @@ export default function MenuPreview() {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.4, duration: 0.6 }}
                   className={cn(
-                    "font-secondary text-neutral-gray leading-relaxed",
+                    "font-secondary leading-relaxed",
                     "text-lg lg:text-xl",
                     "max-w-lg"
                   )}
