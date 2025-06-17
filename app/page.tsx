@@ -1,7 +1,7 @@
 import Container from '@/components/layout/container';
 import Section from '@/components/layout/section';
 import PageWrapper from '@/components/layout/page-wrapper';
-import Grid from '@/components/layout/grid';
+// import Grid from '@/components/layout/grid';
 import Flex from '@/components/layout/flex';
 import HeroSection from '@/components/sections/hero-section';
 import AboutPreview from '@/components/sections/about-preview';
