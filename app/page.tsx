@@ -5,6 +5,7 @@ import Grid from '@/components/layout/grid';
 import Flex from '@/components/layout/flex';
 import HeroSection from '@/components/sections/hero-section';
 import AboutPreview from '@/components/sections/about-preview';
+import MenuPreview from '@/components/sections/menu-preview';
 
 export default function Home() {
   return (
@@ -13,42 +14,7 @@ export default function Home() {
       <HeroSection />
       
       {/* Menu Preview Section */}
-      <Section spacing="lg" background="glass-light" id="menu-preview">
-        <div className="text-center mb-12">
-          <h2 className="font-primary text-fluid-3xl font-bold text-primary-brown mb-4">
-            The Finest Thai Cuisine
-          </h2>
-          <p className="font-secondary text-fluid-lg text-neutral-gray max-w-2xl mx-auto">
-            Experience the authentic flavors of Thailand with our carefully crafted menu featuring traditional recipes passed down through generations.
-          </p>
-        </div>
-        
-        <Grid 
-          cols={1} 
-          gap="lg"
-          responsive={{
-            sm: 2,
-            lg: 4
-          }}
-          className="container-query"
-        >
-          {['Appetizers', 'Salads', 'Soups', 'Main Dishes'].map((category) => (
-            <div key={category} className="glass-card p-6 card-hover responsive-card">
-              <div className="aspect-square rounded-lg bg-accent-gold/10 mb-4 flex items-center justify-center">
-                <span className="text-accent-gold font-secondary text-xs">
-                  {category} Image
-                </span>
-              </div>
-              <h3 className="font-primary text-fluid-xl font-semibold text-primary-brown mb-2">
-                {category}
-              </h3>
-              <p className="font-secondary text-neutral-gray text-sm">
-                Discover our selection of {category.toLowerCase()} featuring authentic Thai ingredients and traditional cooking methods.
-              </p>
-            </div>
-          ))}
-        </Grid>
-      </Section>
+      <MenuPreview />
 
       {/* About Preview Section */}
       <AboutPreview />

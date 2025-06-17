@@ -1106,3 +1106,97 @@ html {
     padding-right: 1rem;
   }
 }
+
+/* Menu Preview Section Enhancements */
+.line-clamp-3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Dark mode support for menu section */
+.menu-section-bg {
+  background-color: var(--color-primary-cream);
+  transition: background-color 150ms ease;
+}
+
+.dark .menu-section-bg {
+  background-color: var(--color-secondary-light-beige);
+}
+
+/* Dark mode card adjustments - Same as header dark mode */
+.menu-category-card {
+  background-color: var(--color-secondary-white);
+  transition: all 300ms ease;
+}
+
+.dark .menu-category-card {
+  background-color: var(--color-primary-cream); /* Same as header dark mode */
+  border: 1px solid rgba(181, 149, 107, 0.2);
+}
+
+/* Dark mode badge adjustments */
+.category-badge {
+  backdrop-filter: blur(10px);
+  background: rgba(181, 149, 107, 0.9);
+  color: var(--color-secondary-white);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.dark .category-badge {
+  background: rgba(181, 149, 107, 0.9);
+  color: var(--color-primary-cream);
+}
+
+/* Enhanced floating animation for decorative elements */
+@keyframes gentle-float-slow {
+  0%, 100% { 
+    transform: translateY(0px) rotate(0deg); 
+  }
+  50% { 
+    transform: translateY(-8px) rotate(180deg); 
+  }
+}
+
+.animate-float-slow {
+  animation: gentle-float-slow 12s ease-in-out infinite;
+}
+
+/* Menu card hover enhancements */
+.menu-card-hover {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.menu-card-hover:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.dark .menu-card-hover:hover {
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+/* Star decoration styling */
+.star-decoration {
+  filter: drop-shadow(0 2px 4px rgba(181, 149, 107, 0.3));
+}
+
+.dark .star-decoration {
+  filter: drop-shadow(0 2px 4px rgba(230, 200, 150, 0.4));
+}
+
+/* See More button styling */
+.see-more-button {
+  background: linear-gradient(135deg, var(--color-primary-brown), var(--color-accent-gold));
+  transition: all 0.3s ease;
+}
+
+.see-more-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(181, 149, 107, 0.3);
+}
+
+.dark .see-more-button:hover {
+  box-shadow: 0 10px 30px rgba(230, 200, 150, 0.4);
+}
