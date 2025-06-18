@@ -1414,3 +1414,210 @@ html {
     margin: 0 auto;
   }
 }
+
+/* Scrollbar hiding utilities */
+.scrollbar-hide {
+  -ms-overflow-style: none;  /* Internet Explorer 10+ */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;  /* Safari and Chrome */
+}
+
+/* Fixed Menu Card Dimensions */
+.menu-card-container {
+  height: 420px;
+  display: flex;
+  flex-direction: column;
+}
+
+.menu-card-image {
+  height: 192px; /* 48 * 4px = 192px (h-48) */
+  flex-shrink: 0;
+}
+
+.menu-card-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Enhanced Pagination Styles */
+.pagination-button {
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.pagination-button:hover:not(:disabled) {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(181, 149, 107, 0.3);
+}
+
+.pagination-button:active:not(:disabled) {
+  transform: scale(0.95);
+}
+
+.pagination-button.active {
+  box-shadow: 0 6px 20px rgba(181, 149, 107, 0.4);
+}
+
+/* Menu Item Price and Tag Styling */
+.menu-price-tag {
+  background: rgba(181, 149, 107, 0.2);
+  border: 2px solid #000;
+  color: #000;
+  font-weight: 700;
+  backdrop-filter: blur(4px);
+}
+
+.dark .menu-price-tag {
+  background: rgba(181, 149, 107, 0.3);
+  border: 2px solid #fff;
+  color: #fff;
+}
+
+.menu-dietary-tag {
+  background: rgba(212, 184, 150, 0.2);
+  border: 2px solid #000;
+  color: #000;
+  font-weight: 700;
+  backdrop-filter: blur(4px);
+}
+
+.dark .menu-dietary-tag {
+  background: rgba(212, 184, 150, 0.3);
+  border: 2px solid #fff;
+  color: #fff;
+}
+
+/* Consistent Image Aspect Ratios */
+.menu-item-image {
+  aspect-ratio: 4/3;
+  object-fit: cover;
+}
+
+/* Loading State for Images */
+.menu-item-image-loading {
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: loading 1.5s infinite;
+}
+
+@keyframes loading {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+.dark .menu-item-image-loading {
+  background: linear-gradient(90deg, #2a2a2a 25%, #1a1a1a 50%, #2a2a2a 75%);
+  background-size: 200% 100%;
+}
+
+/* Row-Based Height Matching Grid */
+.row-matched-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.row-matched-grid-row {
+  display: grid;
+  gap: 0.75rem;
+  grid-template-columns: repeat(2, 1fr); /* Mobile: 2 columns */
+}
+
+@media (min-width: 640px) {
+  .row-matched-grid-row {
+    gap: 1rem;
+    grid-template-columns: repeat(3, 1fr); /* Tablet: 3 columns */
+  }
+}
+
+@media (min-width: 1024px) {
+  .row-matched-grid {
+    gap: 2rem;
+  }
+  
+  .row-matched-grid-row {
+    gap: 1.5rem;
+    grid-template-columns: repeat(4, 1fr); /* Desktop: 4 columns */
+  }
+}
+
+/* Mobile Menu Card Optimizations */
+@media (max-width: 639px) {
+  .menu-item-card {
+    border-radius: 0.75rem; /* Smaller border radius on mobile */
+  }
+  
+  .menu-item-card h3 {
+    font-size: 0.875rem; /* 14px */
+    line-height: 1.25rem;
+  }
+  
+  .menu-item-card p {
+    font-size: 0.75rem; /* 12px */
+    line-height: 1rem;
+  }
+  
+  .menu-item-price {
+    font-size: 0.75rem !important; /* 12px */
+    padding: 0.25rem 0.5rem;
+  }
+  
+  .menu-dietary-tag {
+    font-size: 0.625rem; /* 10px */
+    padding: 0.125rem 0.375rem;
+  }
+}
+
+/* Ensure equal widths across all breakpoints */
+.menu-grid-container {
+  width: 100%;
+}
+
+.menu-grid-container > * {
+  width: 100%;
+  min-width: 0; /* Allow flex items to shrink */
+}
+
+/* Responsive Typography for Menu Cards */
+.menu-card-title {
+  font-size: clamp(0.875rem, 2vw, 1.125rem);
+  line-height: 1.3;
+}
+
+.menu-card-description {
+  font-size: clamp(0.75rem, 1.5vw, 0.875rem);
+  line-height: 1.4;
+}
+
+.menu-card-price {
+  font-size: clamp(0.75rem, 1.5vw, 1rem);
+}
+
+/* Loading States for Height Matching */
+.height-matching-loader {
+  min-height: 200px;
+  background: linear-gradient(90deg, 
+    transparent 25%, 
+    rgba(181, 149, 107, 0.1) 50%, 
+    transparent 75%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+}
+
+@keyframes shimmer {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+.dark .height-matching-loader {
+  background: linear-gradient(90deg, 
+    transparent 25%, 
+    rgba(255, 255, 255, 0.05) 50%, 
+    transparent 75%
+  );
+  background-size: 200% 100%;
+}
