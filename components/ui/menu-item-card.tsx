@@ -22,21 +22,25 @@ const MenuItemCard = forwardRef<HTMLDivElement, MenuItemCardProps>(({
   useImperativeHandle(ref, () => cardRef.current!);
 
   useEffect(() => {
+    let lastHeight = 0;
+    
     const measureHeight = () => {
       if (cardRef.current) {
         const height = cardRef.current.offsetHeight;
-        if (onHeightChange) {
+        // Only call onHeightChange if height actually changed
+        if (height !== lastHeight && onHeightChange) {
+          lastHeight = height;
           onHeightChange(height);
         }
       }
     };
-
+  
     measureHeight();
     
     // Remeasure on window resize
     window.addEventListener('resize', measureHeight);
     return () => window.removeEventListener('resize', measureHeight);
-  }, [onHeightChange, item]);
+  }, [item]); // Keep only item as dependency
 
   return (
     <motion.div
