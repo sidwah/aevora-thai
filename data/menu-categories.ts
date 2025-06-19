@@ -44,6 +44,6 @@ export interface MenuCategory {
   
   export const menuHeroContent = {
     title: "The Finest Thai Cuisine",
-    description: "At Thai Delight, we thrive at creating the best Thai dish. With over 20 dishes to choose from, explore what our menu has to offer.",
+    description: "At Aevora Thai, we thrive at creating the best Thai dish. With over 20 dishes to choose from, explore what our menu has to offer.",
     heroImage: "/images/menu/hero-pad-thai.jpg"
   };

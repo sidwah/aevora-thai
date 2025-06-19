@@ -53,7 +53,7 @@ const LocationInfoSection = () => {
             >
               <div className="flex items-center gap-2 mb-3">
                 <MapPin className="w-5 h-5 text-primary-brown" />
-                <span className="font-secondary text-sm uppercase tracking-wider ">
+                <span className="font-secondary text-neutral-gray text-sm uppercase tracking-wider ">
                   Find Us
                 </span>
               </div>

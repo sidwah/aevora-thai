@@ -5,6 +5,7 @@ import Image from 'next/image';
 import Container from '@/components/layout/container';
 import Section from '@/components/layout/section';
 import { restaurantStory } from '@/data/restaurant-story';
+import { cn } from '@/lib/utils';
 import { Calendar, MapPin, Star } from 'lucide-react';
 
 export default function OurStory() {
@@ -93,7 +94,7 @@ export default function OurStory() {
             </div>
 
             <div className="space-y-6">
-              <p className="font-secondary text-base lg:text-lg leading-relaxed">
+              <p className="font-secondary  text-base lg:text-lg leading-relaxed">
                 {restaurantStory.journey.development}
               </p>
               <p className="font-secondary text-base lg:text-lg leading-relaxed">
@@ -104,11 +105,14 @@ export default function OurStory() {
 
           {/* Image */}
           <motion.div 
-            className="relative"
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.3, duration: 0.8 }}
             viewport={{ once: true }}
+            className={cn("relative glass-medium rounded-3xl shadow-2xl",
+                "hover:shadow-3xl transition-all duration-500",
+                "hover:scale-105 transform rotate-2 hover:rotate-3"
+              )}
           >
             <div className="relative h-80 lg:h-[500px]">
               <div className="relative h-full glass-medium rounded-2xl overflow-hidden">

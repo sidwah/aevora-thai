@@ -6,6 +6,7 @@ import Container from '@/components/layout/container';
 import Section from '@/components/layout/section';
 import { founderInfo, restaurantStory } from '@/data/restaurant-story';
 import { ArrowRight, Award, Users } from 'lucide-react';
+import { cn } from '@/lib/utils';
 import Link from 'next/link';
 
 export default function AboutHero() {
@@ -160,13 +161,16 @@ export default function AboutHero() {
 
             {/* Image Column */}
             <motion.div 
-              className="relative"
               initial={{ opacity: 0, x: 50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.3, duration: 0.8 }}
+              className={cn(" relative glass-medium rounded-3xl ",
+                "shadow-2xl hover:shadow-3xl transition-all duration-500",
+                "hover:scale-105 transform rotate-2 hover:rotate-3"
+              )}
             >
               <div className="relative h-[500px] xl:h-[600px]">
-                <div className="relative h-full glass-medium rounded-3xl overflow-hidden">
+                <div className="relative h-full rounded-3xl overflow-hidden">
                   <Image
                     src="/images/about/michael-arkoh-hero.jpg"
                     alt="Michael Arkoh, Founder of Aevora Thai Restaurant"

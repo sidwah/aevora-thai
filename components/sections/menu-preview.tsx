@@ -65,7 +65,7 @@ export default function MenuPreview() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3, duration: 0.6 }}
             className={cn(
-              "font-secondary text-neutral-gray leading-relaxed text-center mb-12",
+              "font-secondary leading-relaxed text-center mb-12",
               "text-base sm:text-lg",
               "max-w-2xl mx-auto"
             )}

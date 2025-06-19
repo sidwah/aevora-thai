@@ -108,7 +108,7 @@ export default function HeroSection() {
           >
             <p className={cn(
               "font-secondary text-base sm:text-lg",
-              "text-neutral-gray leading-relaxed",
+              "leading-relaxed",
               "max-w-md mx-auto"
             )}>
               Join us at the table as you dine for the perfect meal. 

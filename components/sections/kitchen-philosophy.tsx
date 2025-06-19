@@ -5,6 +5,7 @@ import Image from 'next/image';
 import Container from '@/components/layout/container';
 import Section from '@/components/layout/section';
 import { kitchenPhilosophy } from '@/data/team-members';
+import { cn } from '@/lib/utils';
 import { ChefHat } from 'lucide-react';
 
 export default function KitchenPhilosophy() {
@@ -37,11 +38,15 @@ export default function KitchenPhilosophy() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center mb-16">
           {/* Image */}
           <motion.div 
-            className="relative order-2 lg:order-1"
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
+            className={cn("glass-medium rounded-3xl shadow-2xl",
+              "relative order-2 lg:order-1",
+              "hover:shadow-3xl transition-all duration-500",
+              "hover:scale-105 transform rotate-2 hover:rotate-3"
+            )}
           >
             <div className="relative h-80 lg:h-[500px]">
               <div className="relative h-full glass-medium rounded-2xl overflow-hidden">

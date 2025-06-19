@@ -62,7 +62,7 @@ export default function MenuContent() {
               <h2 className="font-primary text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">
                 {categoryInfo.name}
               </h2>
-              <p className="font-secondary text-lg sm:text-xl">
+              <p className="font-secondary text-neutral-gray text-lg sm:text-xl">
                 {categoryInfo.description}
               </p>
             </motion.div>
