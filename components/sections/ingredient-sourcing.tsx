@@ -77,7 +77,7 @@ export default function IngredientSourcing() {
                       {practice.items.map((item, itemIndex) => (
                         <div key={itemIndex} className="flex items-center justify-center gap-2">
                           <div className="w-1.5 h-1.5 rounded-full bg-primary-brown" />
-                          <span className="font-secondary text-xs lg:text-sm text-neutral-gray">
+                          <span className="font-secondary text-xs lg:text-sm ">
                             {item}
                           </span>
                         </div>

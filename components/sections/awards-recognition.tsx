@@ -101,14 +101,14 @@ export default function AwardsRecognition() {
               
               {/* Rating */}
               <div>
+                <p className="font-primary text-2xl lg:text-3xl font-bold text-primary-brown mb-2">
+                  4.9/5
+                </p>
                 <div className="flex items-center justify-center gap-1 mb-2">
                   {[...Array(5)].map((_, i) => (
                     <Star key={i} className="w-6 h-6 fill-yellow-400 text-yellow-400" />
                   ))}
                 </div>
-                <p className="font-primary text-2xl lg:text-3xl font-bold">
-                  4.9/5
-                </p>
                 <p className="font-secondary text-sm text-neutral-gray">
                   Average Rating
                 </p>
