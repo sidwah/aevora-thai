@@ -179,7 +179,20 @@ const LocationInfoSection = () => {
                 Contact Us
                 <ArrowRight className="w-4 h-4" />
               </a>
+
+              
             </motion.div>
+             {/* Parking Info */}
+             <motion.div
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ duration: 0.5, delay: 0.8 }}
+                  className="mt-6 pt-6 border-t border-white/20"
+                >
+                  <p className="font-secondary text-xs text-white/75 text-center">
+                    🚗 Free parking available • 🚌 Public transport accessible
+                  </p>
+                </motion.div>
           </motion.div>
         </div>
       </div>

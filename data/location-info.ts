@@ -19,7 +19,10 @@ export const locationInfo = {
     phoneDisplay: '+233 25 779 9736',
     phoneDialable: 'tel:+233257799736',
     email: 'talktoaevora@gmail.com',
-    website: 'www.aevorathai.com',
+    emailSubject: 'mailto:talktoaevora@gmail.com?subject=Inquiry from Website',
+    whatsapp: '+233257799736',
+    whatsappLink: 'https://wa.me/233257799736?text=Hello, I would like to make an inquiry about Aevora Thai Restaurant',
+    website: 'aevora-thai.vercel.app',
   },
   hours: {
     weekdays: {
@@ -41,4 +44,21 @@ export const locationInfo = {
     'Private Events',
     'Catering Services',
   ],
+  social: {
+    instagram: 'https://instagram.com/aevorathai',
+    facebook: 'https://facebook.com/aevorathai',
+    // Add more social platforms as needed
+  },
 } as const;
+
+// Contact form subjects
+export const contactSubjects = [
+  'General Inquiry',
+  'Reservation Request', 
+  'Catering Inquiry',
+  'Private Events',
+  'Feedback & Reviews',
+  'Other',
+] as const;
+
+export type ContactSubject = typeof contactSubjects[number];
