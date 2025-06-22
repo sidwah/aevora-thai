@@ -1,6 +1,5 @@
 'use client';
-
-import { useState } from 'react';
+import { useState, useCallback } from 'react';
 import { motion } from 'framer-motion';
 import Container from '@/components/layout/container';
 import Section from '@/components/layout/section';
@@ -18,15 +17,13 @@ export default function ReservationForm() {
     try {
       // Simulate API call
       await new Promise(resolve => setTimeout(resolve, 2000));
-      
       console.log('Reservation Data:', data);
       setSubmitSuccess(true);
       
-      // Reset form after success
+      // Reset submitSuccess after modal is handled
       setTimeout(() => {
         setSubmitSuccess(false);
-        setReservationData({});
-      }, 3000);
+      }, 1000);
       
     } catch (error) {
       console.error('Reservation failed:', error);
@@ -35,9 +32,10 @@ export default function ReservationForm() {
     }
   };
 
-  const handleFormUpdate = (data: Partial<ReservationData>) => {
+  // Use useCallback to prevent function recreation on every render
+  const handleFormUpdate = useCallback((data: Partial<ReservationData>) => {
     setReservationData(prev => ({ ...prev, ...data }));
-  };
+  }, []);
 
   return (
     <Section spacing="xl" className="reservation-form-bg">
@@ -60,7 +58,6 @@ export default function ReservationForm() {
                   Complete the form below to reserve your dining experience.
                 </p>
               </div>
-
               <ReservationFormFields
                 onSubmit={handleReservationSubmit}
                 onUpdate={handleFormUpdate}
@@ -70,7 +67,7 @@ export default function ReservationForm() {
             </div>
           </motion.div>
 
-          {/* Booking Summary - 1/3 width on desktop */}
+          {/* Sticky Booking Summary - 1/3 width on desktop */}
           <motion.div
             initial={{ opacity: 0, x: 20 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -78,7 +75,10 @@ export default function ReservationForm() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="lg:col-span-1"
           >
-            <ReservationSummary reservationData={reservationData} />
+            {/* Sticky wrapper for desktop */}
+            <div className="lg:sticky lg:top-6 lg:max-h-[calc(100vh-3rem)] lg:overflow-y-auto">
+              <ReservationSummary reservationData={reservationData} />
+            </div>
           </motion.div>
         </div>
       </Container>
