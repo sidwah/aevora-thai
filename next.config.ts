@@ -1,6 +1,12 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  // Add metadataBase to fix the warning
+  env: {
+    NEXT_PUBLIC_SITE_URL: process.env.NODE_ENV === 'production' 
+      ? 'https://aevora-thai.vercel.app' 
+      : 'http://localhost:3000'
+  },
   images: {
     remotePatterns: [
       {

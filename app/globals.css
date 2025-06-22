@@ -1621,3 +1621,252 @@ html {
   );
   background-size: 200% 100%;
 }
+
+/* Gallery Hero Specific Styles */
+.gallery-hero-gradient {
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.7) 0%,
+    rgba(0, 0, 0, 0.4) 30%,
+    rgba(0, 0, 0, 0.2) 60%,
+    rgba(0, 0, 0, 0.1) 100%
+  );
+}
+
+/* Ensure carousel images don't interfere with text */
+.embla__slide img {
+  object-position: center center;
+}
+
+/* Better glass effects for hero elements */
+.hero-glass-light {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.hero-glass-medium {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+/* === GALLERY MASONRY STYLES === */
+
+/* Gallery Card Animations */
+.gallery-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+/* Lightbox Backdrop Blur */
+.lightbox-backdrop {
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+/* Gallery Image Loading States */
+.gallery-image-loading {
+  background: linear-gradient(
+    90deg,
+    rgba(245, 242, 238, 0.2) 25%,
+    rgba(245, 242, 238, 0.4) 50%,
+    rgba(245, 242, 238, 0.2) 75%
+  );
+  background-size: 200% 100%;
+  animation: loading 1.5s infinite;
+}
+
+@keyframes loading {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+/* Gallery Tag Animations */
+.gallery-tag {
+  transition: all 0.2s ease;
+}
+
+.gallery-tag:hover {
+  transform: scale(1.05);
+  background-color: var(--color-primary-brown);
+  color: white;
+}
+
+/* Lightbox Image Transitions */
+.lightbox-image {
+  transition: transform 0.3s ease;
+}
+
+.lightbox-image:hover {
+  transform: scale(1.02);
+}
+
+/* Category Badge Hover Effects */
+.category-badge {
+  transition: all 0.2s ease;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.category-badge:hover {
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  transform: scale(1.05);
+}
+
+/* Gallery Grid Responsive Utilities */
+.gallery-grid-1 { grid-template-columns: repeat(1, minmax(0, 1fr)); }
+.gallery-grid-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.gallery-grid-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.gallery-grid-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.gallery-grid-5 { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+
+/* Dark mode specific adjustments */
+.dark .gallery-image-loading {
+  background: linear-gradient(
+    90deg,
+    rgba(42, 42, 42, 0.2) 25%,
+    rgba(42, 42, 42, 0.4) 50%,
+    rgba(42, 42, 42, 0.2) 75%
+  );
+}
+
+.dark .gallery-card {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+}
+
+.dark .gallery-card:hover {
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+/* === GALLERY CURSOR STYLES === */
+
+/* Zoom cursor for gallery images */
+.cursor-zoom-in {
+  cursor: zoom-in;
+}
+
+.cursor-zoom-in:hover {
+  cursor: zoom-in;
+}
+
+/* Custom zoom cursor (optional - more distinctive) */
+.gallery-zoom-cursor {
+  cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="21 21l-4.35-4.35"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>') 12 12, zoom-in;
+}
+
+/* Gallery Grid Layout Fixes */
+.gallery-uniform-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(2, 1fr); /* Mobile: 2 columns */
+}
+
+@media (min-width: 768px) {
+  .gallery-uniform-grid {
+    grid-template-columns: repeat(3, 1fr); /* Tablet: 3 columns */
+    gap: 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .gallery-uniform-grid {
+    grid-template-columns: repeat(4, 1fr); /* Desktop: 4 columns */
+    gap: 1.5rem;
+  }
+}
+
+/* Gallery Card Hover States */
+.gallery-card-hover {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.gallery-card-hover:hover {
+  transform: translateY(-4px);
+  box-shadow: 
+    0 20px 25px -5px rgba(0, 0, 0, 0.1),
+    0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+/* Smooth Layout Transitions */
+[data-layout] {
+  transition: all 0.3s ease;
+}
+
+/* Gallery Tag Styles */
+.gallery-tag-hover {
+  transition: all 0.2s ease;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.gallery-tag-hover:hover {
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  transform: scale(1.02);
+}
+
+/* Loading Animation for Images */
+.gallery-image-skeleton {
+  background: linear-gradient(
+    90deg,
+    rgba(245, 242, 238, 0.4) 25%,
+    rgba(245, 242, 238, 0.6) 50%,
+    rgba(245, 242, 238, 0.4) 75%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+/* Dark mode adjustments */
+.dark .gallery-image-skeleton {
+  background: linear-gradient(
+    90deg,
+    rgba(42, 42, 42, 0.4) 25%,
+    rgba(42, 42, 42, 0.6) 50%,
+    rgba(42, 42, 42, 0.4) 75%
+  );
+}
+
+/* Ensure images maintain aspect ratio */
+.gallery-aspect-ratio {
+  aspect-ratio: 4/3;
+  width: 100%;
+  height: auto;
+}
+
+/* Gallery badge positioning */
+.gallery-badge-container {
+  position: absolute;
+  top: 0.75rem;
+  left: 0.75rem;
+  right: 0.75rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  pointer-events: none;
+}
+
+.gallery-badge-container > * {
+  pointer-events: auto;
+}
